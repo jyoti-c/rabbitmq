@@ -10,9 +10,9 @@ public class ConnectionDetails {
     public static ConnectionFactory getRabbitMQConnection(String username,String password,
         String host) throws NoSuchAlgorithmException, KeyManagementException {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setUsername("your_username");
-        factory.setPassword("your_password");
-        factory.setHost("your_host");
+        factory.setUsername(username);
+        factory.setPassword(password);
+        factory.setHost(host);
         factory.setPort(5671);
         factory.useSslProtocol();
         return factory;
